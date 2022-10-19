@@ -30,7 +30,8 @@ short [][] findata = new short [N][2];
     for (int j = 0; j < N; j++){
         for (int k = 0; k < dataPrimo[j].length(); k++){
             if (Character.getNumericValue(dataPrimo[j].charAt(k)) > 2) 
-            { dataPrimo[j] = dataPrimo[j].substring(0, k) + dataPrimo[(Character.getNumericValue(dataPrimo[j].charAt(k))-3)] + dataPrimo[j].substring(k+1, dataPrimo[j].length());
+            { dataPrimo[j] = dataPrimo[j].substring(0, k) + dataPrimo[(Character.getNumericValue(dataPrimo[j].charAt(k))-3)] 
+                + dataPrimo[j].substring(k+1, dataPrimo[j].length());
                
             }
         }
@@ -53,7 +54,9 @@ String finalle = "";
 String[] arra = new String [3]; 
 for (int y = 0; y < nTask; y++){
     arra = reader.readLine().split(" ");
-    if (findata[(Integer.valueOf(arra[2])-3)][0] + findata[(Integer.valueOf(arra[2])-3)][1] != 0 && findata[(Integer.valueOf(arra[2])-3)][0] <= Integer.valueOf(arra[0]) && findata[(Integer.valueOf(arra[2])-3)][1] <= Integer.valueOf(arra[1])) 
+    if (findata[(Integer.valueOf(arra[2])-3)][0] + findata[(Integer.valueOf(arra[2])-3)][1] != 0 
+        && findata[(Integer.valueOf(arra[2])-3)][0] <= Integer.valueOf(arra[0]) 
+        && findata[(Integer.valueOf(arra[2])-3)][1] <= Integer.valueOf(arra[1])) 
     {finalle += "1";} else {finalle += "0";}
 }
 
